@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Streaming video processing with GPU.js</title>
+  <script src="static/gpu-browser.min.js"></script>
+</head>
+<body>
+<h1>Streaming video processing with GPU.js</h1>
+
+<div style="text-align: center">
+  <label><input type="checkbox" id="weird-filter" /> Weird filter</label><br />
+  <label><input type="checkbox" id="gpu-enabled" checked /> GPU enabled</label><br />
+</div>
+
+<video hidden id="video" width="1024" height="768"></video>
+<canvas hidden id="videoCanvas" width="1024" height="768"></canvas>
+
+<script src="static/videosetup.js"></script>
+
+<div id="canvas-parent" class="grid-item">
+  <h3>GPU.js Graphical Output <span id="fps-number">0</span><span> fps</span></h3>
+</div>
+
+
+<script src="static/kernels.js"></script>
+
+</body>
+</html>
